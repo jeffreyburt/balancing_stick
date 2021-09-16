@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -7,6 +6,8 @@ public class main {
     private static ArrayList<Motor_data_point> motorDataPoints;
 
     private static File csv_file = new File("C:\\Users\\Jeffrey\\Desktop\\Falcon500MotorCurveData (2).csv");
+
+    private static Simulator simulator;
 
     public static void main(String[] args) throws IOException {
 
@@ -32,8 +33,14 @@ public class main {
             total_torque += point.torque;
             total_current += point.current;
         }
-
         System.out.println("Torque Constant: " + total_torque/total_current );
+
+        System.out.println(motorDataPoints.get(motorDataPoints.size() - 1).speed);
+
+        simulator = new Simulator(motorDataPoints);
+
+
+
 
     }
 
