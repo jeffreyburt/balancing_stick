@@ -5,7 +5,7 @@ public class main {
 
     private static ArrayList<Motor_data_point> motorDataPoints;
 
-    private static File csv_file = new File("C:\\Users\\Jeffrey\\Desktop\\Falcon500MotorCurveData (2).csv");
+    private static File csv_file = new File("C:\\Users\\Jeffrey Burt\\Desktop\\Falcon500MotorCurveData - Copy.csv");
 
     private static Simulator simulator;
 
@@ -35,7 +35,6 @@ public class main {
         }
         System.out.println("Torque Constant: " + total_torque/total_current );
 
-        System.out.println(motorDataPoints.get(motorDataPoints.size() - 1).speed);
 
         simulator = new Simulator(motorDataPoints);
 
